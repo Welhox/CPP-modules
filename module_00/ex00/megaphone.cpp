@@ -3,8 +3,8 @@
 
 int main(int argc, char *argv[])
 {
-    int i = 1;
-    int x = 0;
+    int     i = 1;
+    int     x = 0;
     bool    empty = true;
 
     if (argc >= 2)
