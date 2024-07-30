@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+         #
+#    By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 14:11:27 by clundber          #+#    #+#              #
-#    Updated: 2024/07/12 14:42:04 by clundber         ###   ########.fr        #
+#    Updated: 2024/07/30 12:14:09 by casimirri        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,9 @@ COLOUR_END=\033[0m
 NAME = phonebook
 
 #------------- SOURCE FILES ------#
-CFILES = phonebook.cpp
+CFILES = main.cpp phonebook.cpp
+
+HFILES := -I Phonebook.hpp Contact.hpp
 
 OFILES = $(CFILES:.cpp=.o)
 
@@ -36,7 +38,7 @@ all: $(NAME)
 
 $(NAME): $(OFILES)
 	@echo "$(COLOUR_BLUE)compiling $(NAME)$(COLOUR_END)"
-	@$(CC) $(CFLAGS) $(OFILES) -o $(NAME) 
+	@$(CC) $(CFLAGS) $(OFILES) $(HFILES) -o $(NAME) 
 	@echo "$(COLOUR_GREEN)$(NAME) compiled successfully$(COLOUR_END)"
 
 clean:
