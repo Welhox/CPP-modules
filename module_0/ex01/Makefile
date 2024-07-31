@@ -6,7 +6,7 @@
 #    By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 14:11:27 by clundber          #+#    #+#              #
-#    Updated: 2024/07/30 12:14:09 by casimirri        ###   ########.fr        #
+#    Updated: 2024/07/30 15:55:34 by casimirri        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ COLOUR_END=\033[0m
 NAME = phonebook
 
 #------------- SOURCE FILES ------#
-CFILES = main.cpp phonebook.cpp
+CFILES = main.cpp PhoneBook.cpp
 
 HFILES := -I Phonebook.hpp Contact.hpp
 
@@ -30,7 +30,10 @@ OFILES = $(CFILES:.cpp=.o)
 
 #--------- FLAGS ----------#
 CC = @c++
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror{
+
+    
+}
 
 #------------------#
 
