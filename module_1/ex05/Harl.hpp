@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/31 16:18:31 by casimirri         #+#    #+#             */
-/*   Updated: 2024/08/01 15:25:20 by casimirri        ###   ########.fr       */
+/*   Created: 2024/08/01 17:01:49 by casimirri         #+#    #+#             */
+/*   Updated: 2024/08/01 17:30:18 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <string>
 
-class Weapon
+class Harl
 {
 private:
-    std::string type;
+    void debug( void );
+    void info( void );
+    void warning( void );
+    void error( void );
 
 public:
-    Weapon(std::string new_type);
-
-    const std::string& getType();
-    void  setType(std::string new_type);
-
+    void complain(std::string level);
 };
