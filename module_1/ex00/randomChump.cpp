@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   randomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/30 15:59:18 by casimirri         #+#    #+#             */
-/*   Updated: 2024/08/01 11:05:07 by casimirri        ###   ########.fr       */
+/*   Created: 2024/08/01 11:04:17 by casimirri         #+#    #+#             */
+/*   Updated: 2024/08/01 11:05:01 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main()
+void    randomChump(std::string name)
 {
-    Zombie *new_zombie;
-    randomChump("Kevin");
-    new_zombie = newZombie("Olle");
-    new_zombie->announce();
-    delete new_zombie;
+    Zombie new_zombie(name);
+    new_zombie.announce();
 }

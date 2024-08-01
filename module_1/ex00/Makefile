@@ -6,7 +6,7 @@
 #    By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 14:11:27 by clundber          #+#    #+#              #
-#    Updated: 2024/07/31 10:48:24 by casimirri        ###   ########.fr        #
+#    Updated: 2024/08/01 11:06:44 by casimirri        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,7 @@ COLOUR_END=\033[0m
 NAME = Zombies
 
 #------------- SOURCE FILES ------#
-CFILES = main.cpp Zombie.cpp
-
-HFILES := -I Zombie.hpp
+CFILES = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 
 OFILES = $(CFILES:.cpp=.o)
 
@@ -38,7 +36,7 @@ all: $(NAME)
 
 $(NAME): $(OFILES)
 	@echo "$(COLOUR_BLUE)compiling $(NAME)$(COLOUR_END)"
-	@$(CC) $(CFLAGS) $(OFILES) $(HFILES) -o $(NAME) 
+	@$(CC) $(CFLAGS) $(OFILES) -o $(NAME) 
 	@echo "$(COLOUR_GREEN)$(NAME) compiled successfully$(COLOUR_END)"
 
 clean:
