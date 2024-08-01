@@ -6,7 +6,7 @@
 /*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 16:22:46 by casimirri         #+#    #+#             */
-/*   Updated: 2024/07/31 16:30:03 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/08/01 12:22:27 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@ const std::string& Weapon::getType()
 }
 
 void  Weapon::setType(std::string new_type)
+{
+    type = new_type;
+}
+
+Weapon::Weapon(std::string new_type)
 {
     type = new_type;
 }

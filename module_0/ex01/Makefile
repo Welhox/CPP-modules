@@ -6,7 +6,7 @@
 #    By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 14:11:27 by clundber          #+#    #+#              #
-#    Updated: 2024/07/30 15:55:34 by casimirri        ###   ########.fr        #
+#    Updated: 2024/08/01 10:28:28 by casimirri        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,8 +21,6 @@ NAME = phonebook
 #------------- SOURCE FILES ------#
 CFILES = main.cpp PhoneBook.cpp
 
-HFILES := -I Phonebook.hpp Contact.hpp
-
 OFILES = $(CFILES:.cpp=.o)
 
 %.o: %.cpp
@@ -30,10 +28,7 @@ OFILES = $(CFILES:.cpp=.o)
 
 #--------- FLAGS ----------#
 CC = @c++
-CFLAGS = -Wall -Wextra -Werror{
-
-    
-}
+CFLAGS = -Wall -Wextra -Werror
 
 #------------------#
 
@@ -41,7 +36,7 @@ all: $(NAME)
 
 $(NAME): $(OFILES)
 	@echo "$(COLOUR_BLUE)compiling $(NAME)$(COLOUR_END)"
-	@$(CC) $(CFLAGS) $(OFILES) $(HFILES) -o $(NAME) 
+	@$(CC) $(CFLAGS) $(OFILES) -o $(NAME) 
 	@echo "$(COLOUR_GREEN)$(NAME) compiled successfully$(COLOUR_END)"
 
 clean:

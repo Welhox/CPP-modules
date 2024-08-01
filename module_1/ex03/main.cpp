@@ -6,7 +6,7 @@
 /*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 16:11:33 by casimirri         #+#    #+#             */
-/*   Updated: 2024/07/31 16:59:19 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/08/01 12:35:24 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,19 +34,3 @@ int main(void)
     }
 return 0;
 }
-    
-/*
-Forbidden functions : None
-Implement a Weapon class that has:
-• A private attribute type, which is a string.
-• A getType() member function that returns a const reference to type.
-• A setType() member function that sets type using the new one passed as parameter.
-Now, create two classes: HumanA and HumanB. They both have a Weapon and a
-name. They also have a member function attack() that displays (of course, without the
-angle brackets):
-<name> attacks with their <weapon type>
-HumanA and HumanB are almost the same except for these two tiny details:
-• While HumanA takes the Weapon in its constructor, HumanB doesn’t.
-• HumanB may not always have a Weapon, whereas HumanA will always be armed.
-8
- */
