@@ -6,7 +6,7 @@
 /*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/01 12:49:54 by casimirri         #+#    #+#             */
-/*   Updated: 2024/08/01 17:19:19 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/08/02 17:46:27 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,6 @@
 #include <fstream>
 #include <string>
 #include <filesystem>
-
-void    read_file(std::string *buffer, std::ifstream *original_file)
-{
-    std::string line;
-    while (getline(*original_file, line))
-    {
-        if (!line.empty())
-        {
-            if (!buffer->empty())
-                *buffer = *buffer + '\n';
-         *buffer = *buffer + line;
-        }
-    }
-}
-
-
 
 int main(int argc, char **argv)
 {
@@ -53,16 +37,19 @@ int main(int argc, char **argv)
             throw(std::invalid_argument("failed to create file"));
 
         std::string buffer;
-        read_file(&buffer, &original_file);
+        std::ostringstream stream;
+        stream << original_file.rdbuf();
+        buffer = stream.str();
         
         long unsigned int index = 0;
         while (index <= buffer.length())
         {
-            index = buffer.find(to_replace);
+            index = buffer.find(to_replace, index);
             if (index <= buffer.length())
             {
                 buffer.erase(index, to_replace.length());
                 buffer.insert(index, replacement);
+                index += replacement.length();
             }
         }
         new_file << buffer;
@@ -74,5 +61,4 @@ int main(int argc, char **argv)
         std::cerr << e.what() << '\n';
         return (1);
     }
-    std::cout << "Great success" << std::endl;
 }
