@@ -6,7 +6,7 @@
 #    By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/01 12:49:34 by casimirri         #+#    #+#              #
-#    Updated: 2024/08/02 15:02:04 by casimirri        ###   ########.fr        #
+#    Updated: 2024/08/02 16:38:15 by casimirri        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ COLOUR_BLUE=\033[0;34m
 COLOUR_END=\033[0m
 
 # ------------ PROJECT -------#
-NAME = harl
+NAME = harlFilter
 
 #------------- SOURCE FILES ------#
 CFILES = main.cpp Harl.cpp
