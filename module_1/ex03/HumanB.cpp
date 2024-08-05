@@ -6,7 +6,7 @@
 /*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 16:52:07 by casimirri         #+#    #+#             */
-/*   Updated: 2024/08/01 16:40:24 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/08/05 15:28:22 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void    HumanB::attack()
 {
     if (weapon)
         std::cout << name << " attacks with their " << weapon->getType() << std::endl; 
-    else
-        std::cout << name << " attacks with their " << "unarmed" << std::endl;   
 }
 
 HumanB::HumanB(std::string new_name): weapon()
