@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+         #
+#    By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 14:11:27 by clundber          #+#    #+#              #
-#    Updated: 2024/08/01 10:28:28 by casimirri        ###   ########.fr        #
+#    Updated: 2024/08/07 12:07:56 by clundber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ COLOUR_END=\033[0m
 NAME = phonebook
 
 #------------- SOURCE FILES ------#
-CFILES = main.cpp PhoneBook.cpp
+CFILES = main.cpp PhoneBook.cpp Contact.cpp
 
 OFILES = $(CFILES:.cpp=.o)
 

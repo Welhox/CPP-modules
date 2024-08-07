@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 14:40:45 by clundber          #+#    #+#             */
-/*   Updated: 2024/07/30 15:47:54 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/08/07 12:07:19 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,42 +36,48 @@ Contact input_info()
 {
     Contact new_contact;
     std::cout << "INPUT NEW CONTACT INFORMATION:" << std::endl;
-    while (new_contact.first_name == "")
+    std::string temp;
+    while (new_contact.getFn().empty())
     {
         std::cout << "FIRST NAME: ";
-        std::getline(std::cin, new_contact.first_name);
+        std::getline(std::cin, temp);
         if (std::cin.eof())
             throw std::runtime_error("error");
+        new_contact.setFn(temp);
     }
-    while (new_contact.last_name == "")
+    while (new_contact.getLn().empty())
     {
         std::cout << "LAST NAME: ";
-        std::getline(std::cin, new_contact.last_name);
+        std::getline(std::cin, temp);
         if (std::cin.eof())
             throw std::runtime_error("error");
+        new_contact.setLn(temp);
     }
-    while (new_contact.nickname == "")
+    while (new_contact.getNn().empty())
     {    
         std::cout << "NICKNAME: ";
-        std::getline(std::cin, new_contact.nickname);
+        std::getline(std::cin, temp);
         if (std::cin.eof())
             throw std::runtime_error("error");
+        new_contact.setNn(temp);
     }
     while (42)
     {
         std::cout << "PHONENUMBER: ";
-        std::getline(std::cin, new_contact.phone_number);
-        if(new_contact.phone_number != "" && check_number(new_contact.phone_number) == 0)
+        std::getline(std::cin, temp);
+        new_contact.setPn(temp);
+        if(new_contact.getPn() != "" && check_number(new_contact.getPn()) == 0)
             break ;
         if (std::cin.eof())
             throw std::runtime_error("error");
     }
-    while (new_contact.darkest_secret == "")
+    while (new_contact.getDs().empty())
     {    
-        std::cout << "DARK SECRET: ";
-        std::getline(std::cin, new_contact.darkest_secret);
+        std::cout << "DARKEST SECRET: ";
+        std::getline(std::cin, temp);
         if (std::cin.eof())
             throw std::runtime_error("error");
+        new_contact.setDs(temp);
     }
     return(new_contact);
 }
@@ -107,16 +113,16 @@ void    print_search(std::string to_print, bool end)
 
 void    print_contact(Contact contact)
 {
-    if (contact.first_name == "")
+    if (contact.getFn().empty())
     {
         std::cout << "EMPTY INDEX SELECTED" << std::endl;
         return ;
     }
-    std::cout << "FIRST NAME: " << contact.first_name << std::endl;
-    std::cout << "LAST NAME: " << contact.last_name << std::endl;
-    std::cout << "NICKNAME: " << contact.nickname << std::endl;
-    std::cout << "PHONENUMBER: " << contact.phone_number << std::endl;
-    std::cout << "DARKEST SECRET: " << contact.darkest_secret << std::endl;
+    std::cout << "FIRST NAME: " << contact.getFn() << std::endl;
+    std::cout << "LAST NAME: " << contact.getLn() << std::endl;
+    std::cout << "NICKNAME: " << contact.getNn() << std::endl;
+    std::cout << "PHONENUMBER: " << contact.getPn() << std::endl;
+    std::cout << "DARKEST SECRET: " << contact.getDs() << std::endl;
 }
 
 void PhoneBook::search_contacts()
@@ -127,9 +133,9 @@ void PhoneBook::search_contacts()
     for (int i = 0; i < 8; i++)
     {
         print_search(std::to_string(i), false);
-        print_search(contact[i].first_name, false);
-        print_search(contact[i].last_name, false);
-        print_search(contact[i].nickname, true);
+        print_search(contact[i].getFn(), false);
+        print_search(contact[i].getLn(), false);
+        print_search(contact[i].getNn(), true);
         std::cout << std::endl;
     }
     while (42)
