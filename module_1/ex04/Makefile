@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+         #
+#    By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/01 12:49:34 by casimirri         #+#    #+#              #
-#    Updated: 2024/08/01 12:49:37 by casimirri        ###   ########.fr        #
+#    Updated: 2024/09/11 11:59:24 by clundber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ OFILES = $(CFILES:.cpp=.o)
 
 #--------- FLAGS ----------#
 CC = @c++
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -std=c++11
 
 #------------------#
 

@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/01 12:49:54 by casimirri         #+#    #+#             */
-/*   Updated: 2024/08/02 17:46:27 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/09/11 14:24:29 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <filesystem>
+#include <sstream>
 
 int main(int argc, char **argv)
 {
@@ -23,11 +23,7 @@ int main(int argc, char **argv)
             throw(std::invalid_argument("invalid argument count"));
         std::string in_name = argv[1];
         std::string to_replace = argv[2];
-        std::string replacement = argv[3];
-        
-        if (std::filesystem::exists(in_name + ".replace"))
-            throw(std::invalid_argument("outfile alredy exists"));
-            
+        std::string replacement = argv[3]; 
         std::ifstream original_file(in_name);
         if (!original_file.is_open())
             throw(std::invalid_argument("failed to open file"));
@@ -40,16 +36,18 @@ int main(int argc, char **argv)
         std::ostringstream stream;
         stream << original_file.rdbuf();
         buffer = stream.str();
-        
         long unsigned int index = 0;
-        while (index <= buffer.length())
+        if (!to_replace.empty())
         {
-            index = buffer.find(to_replace, index);
-            if (index <= buffer.length())
+            while (index <= buffer.length())
             {
-                buffer.erase(index, to_replace.length());
-                buffer.insert(index, replacement);
-                index += replacement.length();
+                index = buffer.find(to_replace, index);
+                if (index <= buffer.length())
+                {
+                    buffer.erase(index, to_replace.length());
+                    buffer.insert(index, replacement);
+                    index += replacement.length();
+                }
             }
         }
         new_file << buffer;
