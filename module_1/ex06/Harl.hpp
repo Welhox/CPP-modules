@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/01 17:01:49 by casimirri         #+#    #+#             */
-/*   Updated: 2024/08/02 15:37:34 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/09/11 15:33:16 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ private:
     void error( void );
 
 public:
-    void complain(std::string level, std::string filter);
+    void complain(std::string filter);
 };
