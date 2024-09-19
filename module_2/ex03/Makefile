@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/09/19 16:09:06 by clundber          #+#    #+#              #
-#    Updated: 2024/09/19 16:25:02 by clundber         ###   ########.fr        #
+#    Created: 2024/09/19 16:09:28 by clundber          #+#    #+#              #
+#    Updated: 2024/09/19 16:25:16 by clundber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ COLOUR_END=\033[0m
 NAME = fixed
 
 #------------- SOURCE FILES ------#
-CFILES = main.cpp Fixed.cpp
+CFILES = main.cpp Fixed.cpp Point.cpp
 
 OFILES = $(CFILES:.cpp=.o)
 
