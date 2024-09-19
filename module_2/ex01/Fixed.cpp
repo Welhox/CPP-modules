@@ -6,7 +6,7 @@
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:27:19 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/18 15:32:11 by clundber         ###   ########.fr       */
+/*   Updated: 2024/09/19 11:51:02 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ Fixed::Fixed(const float new_value)
 	value = roundf(new_value * (1 << fraction));
 }
 
-Fixed::Fixed(Fixed& oldClass)
+Fixed::Fixed(const Fixed& oldClass)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	setRawBits(oldClass.getRawBits());
+	setRawBits(oldClass.value);
 }
 
 Fixed::~Fixed()
@@ -55,23 +55,21 @@ void Fixed::setRawBits(int const raw)
 	value = raw;
 }
 
-Fixed& Fixed::operator=(Fixed& oldClass)
+Fixed& Fixed::operator=(const Fixed& oldClass)
 {
-	setRawBits(oldClass.getRawBits());
-	std::cout << "Copy assigment operator called" << std::endl;
+	if (this != &oldClass)
+	{
+		setRawBits(oldClass.value);
+		std::cout << "Copy assigment operator called" << std::endl;
+	}
 	return(*this);
 }
 
-std::ostream& Fixed::operator<<(std::ostream& stream)
+std::ostream& operator<<(std::ostream& stream, const Fixed& fixed)
 {
-	stream << toFloat();
+	stream << fixed.toFloat();
 	return(stream);	
 }
-
-// float Fixed::operator<<(float output)
-// {
-// 	return (toFloat());
-// }
 
 int Fixed::toInt() const
 {

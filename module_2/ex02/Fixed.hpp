@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 13:27:25 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/19 11:53:03 by clundber         ###   ########.fr       */
+/*   Created: 2024/09/19 11:59:26 by clundber          #+#    #+#             */
+/*   Updated: 2024/09/19 15:14:30 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,27 @@ public:
 	float toFloat( void ) const;
 	void setRawBits(int const raw);
 	int getRawBits() const;
+	
 	Fixed& operator=(const Fixed&);
+	Fixed& operator++();
+	Fixed operator++(int);
+	Fixed& operator--();
+	Fixed operator--(int);
+	static Fixed& max(Fixed&, Fixed&);
+	static const Fixed& max(const Fixed&, const Fixed&);
+	static Fixed& min(Fixed&, Fixed&);
+	static const Fixed& min(const Fixed&, const Fixed&);
 };
+
 	std::ostream& operator<<(std::ostream& stream, const Fixed& fixed);
+	bool operator>(const Fixed& c1, const Fixed& c2);
+	bool operator<(const Fixed& c1, const Fixed& c2);
+	bool operator>=(const Fixed& c1, const Fixed& c2);
+	bool operator<=(const Fixed& c1, const Fixed& c2);
+	bool operator==(const Fixed& c1, const Fixed& c2);
+	bool operator!=(const Fixed& c1, const Fixed& c2);
+
+	float operator*(const Fixed& c1, const Fixed& c2);
+	float operator/(const Fixed& c1, const Fixed& c2);
+	float operator+(const Fixed& c1, const Fixed& c2);
+	float operator-(const Fixed& c1, const Fixed& c2);
