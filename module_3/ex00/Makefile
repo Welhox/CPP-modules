@@ -5,11 +5,10 @@
 #                                                     +:+ +:+         +:+      #
 #    By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/09/19 16:09:06 by clundber          #+#    #+#              #
-#    Updated: 2024/09/20 14:48:31 by clundber         ###   ########.fr        #
+#    Created: 2024/09/20 14:48:42 by clundber          #+#    #+#              #
+#    Updated: 2024/09/20 14:49:35 by clundber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 
 COLOUR_GREEN=\033[0;32m
@@ -18,10 +17,10 @@ COLOUR_BLUE=\033[0;34m
 COLOUR_END=\033[0m
 
 # ------------ PROJECT -------#
-NAME = fixed
+NAME = clap
 
 #------------- SOURCE FILES ------#
-CFILES = main.cpp Fixed.cpp
+CFILES = main.cpp
 
 OFILES = $(CFILES:.cpp=.o)
 
