@@ -6,7 +6,7 @@
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 11:59:18 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/19 15:55:41 by clundber         ###   ########.fr       */
+/*   Updated: 2024/09/20 13:24:03 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,23 @@
 #include <iostream>
 
 int main( void ) {
-Fixed a;
-Fixed const b( 10 );
-Fixed const c( 42.42f );
-Fixed const d( b );
-a = b;
-a = Fixed( 1234.4321f );
-a = (Fixed(a + c));
-std::cout << "a is " << a << std::endl;
-std::cout << "b is " << b << std::endl;
-std::cout << "c is " << c << std::endl;
-std::cout << "d is " << d << std::endl;
-std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+// Fixed  a;
+// Fixed  b( 10 );
+// Fixed  c( 42.42f );
+// Fixed  d( b );
+// a = b;
+// a = Fixed( 1234.4321f );
+// a = (Fixed(a + c));
+// std::cout << "a is " << a << std::endl;
+// std::cout << "b is " << b << std::endl;
+// std::cout << "c is " << c << std::endl;
+// std::cout << "d is " << d << std::endl;
+// std::cout << "a is " << a.toInt() << " as integer" << std::endl;
+// std::cout << "b is " << b.toInt() << " as integer" << std::endl;
+// std::cout << "c is " << c.toInt() << " as integer" << std::endl;
+// std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+
+// std::cout << b + c << std::endl;
 
 // if (a > b)
 // 	std::cout << "> working correctly" << std::endl;
@@ -67,15 +69,15 @@ std::cout << "d is " << d.toInt() << " as integer" << std::endl;
 // std::cout << "f is " << f << std::endl;
 
 
-// Fixed a;
-// Fixed const b( Fixed( 10000005.05f ) * Fixed( 2 ) );
-// std::cout << a << std::endl;
-// std::cout << ++a << std::endl;
-// std::cout << a << std::endl;
-// std::cout << a++ << std::endl;
-// std::cout << a << std::endl;
-// std::cout << b << std::endl;
-// std::cout << Fixed::max( a, b ) << std::endl;
+Fixed a;
+Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+std::cout << a << std::endl;
+std::cout << ++a << std::endl;
+std::cout << a << std::endl;
+std::cout << a++ << std::endl;
+std::cout << a << std::endl;
+std::cout << b << std::endl;
+std::cout << Fixed::max( a, b ) << std::endl;
 
 
 return 0;

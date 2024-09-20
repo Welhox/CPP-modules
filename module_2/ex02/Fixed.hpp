@@ -6,7 +6,7 @@
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 11:59:26 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/19 15:14:30 by clundber         ###   ########.fr       */
+/*   Updated: 2024/09/20 11:49:14 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,17 +41,19 @@ public:
 	static const Fixed& max(const Fixed&, const Fixed&);
 	static Fixed& min(Fixed&, Fixed&);
 	static const Fixed& min(const Fixed&, const Fixed&);
+
+	float operator*(const Fixed& other);
+	float operator/(const Fixed& other);
+	float operator+(const Fixed& other);
+	float operator-(const Fixed& other);
+
+	bool operator>(Fixed& other);
+	bool operator<(Fixed& other);
+	bool operator>=(Fixed& other);
+	bool operator<=(Fixed& other);
+	bool operator==(Fixed& other);
+	bool operator!=(Fixed& other);
+	
 };
 
 	std::ostream& operator<<(std::ostream& stream, const Fixed& fixed);
-	bool operator>(const Fixed& c1, const Fixed& c2);
-	bool operator<(const Fixed& c1, const Fixed& c2);
-	bool operator>=(const Fixed& c1, const Fixed& c2);
-	bool operator<=(const Fixed& c1, const Fixed& c2);
-	bool operator==(const Fixed& c1, const Fixed& c2);
-	bool operator!=(const Fixed& c1, const Fixed& c2);
-
-	float operator*(const Fixed& c1, const Fixed& c2);
-	float operator/(const Fixed& c1, const Fixed& c2);
-	float operator+(const Fixed& c1, const Fixed& c2);
-	float operator-(const Fixed& c1, const Fixed& c2);
