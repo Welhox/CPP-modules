@@ -1,34 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/20 14:49:52 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/23 13:25:26 by clundber         ###   ########.fr       */
+/*   Created: 2024/09/23 13:18:41 by clundber          #+#    #+#             */
+/*   Updated: 2024/09/23 13:24:25 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-# include <string>
+# include "ClapTrap.hpp"
 
-class ClapTrap
+int	main()
 {
-private:
-	std::string name;
-	int	energyPoints;
-	int	hitPoints;
-	int attackDamage;
+	ClapTrap trap1("tom");
 
-public:
-	ClapTrap(std::string);
-	~ClapTrap();
-	// ClapTrap(ClapTrap&);
-	// ClapTrap& operator=(ClapTrap&);
-	
-	void attack(const std::string& target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
-	
-};
+	trap1.beRepaired(2);
+}
