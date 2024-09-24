@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 14:49:52 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/23 13:25:26 by clundber         ###   ########.fr       */
+/*   Updated: 2024/09/24 15:50:36 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ private:
 public:
 	ClapTrap(std::string);
 	~ClapTrap();
-	// ClapTrap(ClapTrap&);
-	// ClapTrap& operator=(ClapTrap&);
+	ClapTrap(ClapTrap&);
+	ClapTrap& operator=(ClapTrap&);
 	
 	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
