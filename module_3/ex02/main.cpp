@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/24 18:58:49 by casimirri         #+#    #+#             */
-/*   Updated: 2024/09/25 14:13:27 by clundber         ###   ########.fr       */
+/*   Created: 2024/09/23 13:18:41 by clundber          #+#    #+#             */
+/*   Updated: 2024/09/25 14:21:10 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include "ClapTrap.hpp"
-# include <string>
+# include "ClapTrap.hpp"
+# include "ScavTrap.hpp"
+# include "FragTrap.hpp"
 
-class ScavTrap : public ClapTrap
+int	main()
 {
-private:
+	ClapTrap tom("Tom");
+	ClapTrap kevin("Kevin");
+	ScavTrap casi("Casi");	
 
-public:
-	ScavTrap(std::string);
-	~ScavTrap();
-	ScavTrap(ScavTrap&);
-	ScavTrap& operator=(ScavTrap&);
+	casi.attack("Kevin");
+	kevin.takeDamage(20);
+	kevin.attack("Casi");
+	casi.takeDamage(0);
+	ScavTrap copy(casi);
+	ScavTrap clone("clone");
+
+	clone = copy;
+	copy.guardGate();
 	
-	void attack(const std::string& target);
-	void guardGate();
-	
-};
+	FragTrap fraggy("Fraggy");
+	fraggy.highFivesGuys();
+}

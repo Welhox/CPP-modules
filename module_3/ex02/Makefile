@@ -6,7 +6,7 @@
 #    By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/20 14:48:42 by clundber          #+#    #+#              #
-#    Updated: 2024/09/25 12:14:09 by clundber         ###   ########.fr        #
+#    Updated: 2024/09/25 14:21:28 by clundber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ COLOUR_END=\033[0m
 NAME = clap
 
 #------------- SOURCE FILES ------#
-CFILES = main.cpp ClapTrap.cpp ScavTrap.cpp
+CFILES = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 OFILES = $(CFILES:.cpp=.o)
 

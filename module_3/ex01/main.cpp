@@ -3,41 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 13:18:41 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/24 16:03:39 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/09/25 14:10:42 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "ClapTrap.hpp"
+# include "ScavTrap.hpp"
 
 int	main()
 {
-	ClapTrap tom("Tom");
+	// ClapTrap tom("Tom");
 	ClapTrap kevin("Kevin");
-	tom.attack("Kevin");
-	kevin.takeDamage(0);
-	kevin.attack("Tom");
-	tom.takeDamage(5);
-	tom.beRepaired(2);
+	ScavTrap casi("Casi");	
 
-	ClapTrap george(tom);
-	ClapTrap steve("steve");
-	steve = tom;
+	casi.attack("Kevin");
+	kevin.takeDamage(20);
+	kevin.attack("Casi");
+	casi.takeDamage(0);
+	ScavTrap copy(casi);
+	ScavTrap clone("clone");
 
-	george.beRepaired(1);
-	tom.beRepaired(1);
-	steve.beRepaired(1);
-	// 	kevin.attack("Tom");
-	// tom.takeDamage(5);
-	// tom.beRepaired(2);
-
-	// 	kevin.attack("Tom");
-	// tom.takeDamage(5);
-	// tom.beRepaired(2);
-
-	// 	kevin.attack("Tom");
-	// tom.takeDamage(5);
-	// tom.beRepaired(2);
+	clone = copy;
+	copy.guardGate();
 }
