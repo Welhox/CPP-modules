@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 13:18:41 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/24 16:03:39 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/09/25 15:53:38 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	main()
 	ClapTrap kevin("Kevin");
 	tom.attack("Kevin");
 	kevin.takeDamage(0);
+	kevin.attack("Tom");
+	tom.takeDamage(5);
 	kevin.attack("Tom");
 	tom.takeDamage(5);
 	tom.beRepaired(2);

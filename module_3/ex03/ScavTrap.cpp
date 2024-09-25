@@ -6,7 +6,7 @@
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:57:59 by casimirri         #+#    #+#             */
-/*   Updated: 2024/09/25 16:25:27 by clundber         ###   ########.fr       */
+/*   Updated: 2024/09/25 16:33:41 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,9 @@ ScavTrap::~ScavTrap()
 
 ScavTrap::ScavTrap(): ClapTrap()
 {
-	name = "default";
-	energyPoints = 0;
-	hitPoints = 0;
-	attackDamage = 0;
+	energyPoints = 50;
+	hitPoints = 100;
+	attackDamage = 20;
 
 	std::cout << "ScavTrap default constructor called" << std::endl;
 }

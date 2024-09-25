@@ -6,7 +6,7 @@
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:57:59 by casimirri         #+#    #+#             */
-/*   Updated: 2024/09/25 14:10:23 by clundber         ###   ########.fr       */
+/*   Updated: 2024/09/25 16:16:27 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,42 +18,50 @@ ScavTrap::~ScavTrap()
 	std::cout << "ScavTrap destructor called" << std::endl;
 }
 
+ScavTrap::ScavTrap(): ClapTrap()
+{
+	name = "default";
+	energyPoints = 0;
+	hitPoints = 0;
+	attackDamage = 0;
+
+	std::cout << "ScavTrap default constructor called" << std::endl;
+}
+
 ScavTrap::ScavTrap(std::string newName): ClapTrap()
 {
-	setName(newName);
-	setEnergy(50);
-	setHitPoints(100);
-	setAttackDmg(20);
+	name = newName;
+	energyPoints = 50;
+	hitPoints = 100;
+	attackDamage = 20;
+	
 	std::cout << "ScavTrap constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(ScavTrap& other)
 {
 	std::cout << "ScavTrap copy constructor called" << std::endl;
-	this->setName(other.getName());
-	this->setHitPoints(other.getHitPoints());
-	this->setEnergy(other.getEnergy());
-	this->setAttackDmg(other.getAttackDmg());
+	
+	*this = other;
 }
 
 ScavTrap& ScavTrap::operator=(ScavTrap& other)
 {
 	std::cout << "ScavTrap copy assigment operator called" << std::endl;
-	this->setName(other.getName());
-	this->setHitPoints(other.getHitPoints());
-	this->setEnergy(other.getEnergy());
-	this->setAttackDmg(other.getAttackDmg());
+	this->name = other.name;
+	this->hitPoints = other.hitPoints;
+	this->energyPoints = other.energyPoints;
+	this->attackDamage = other.attackDamage;
+
 	return(*this);
 }
 
 void ScavTrap::attack(const std::string& target)
 {
-	int energy = getEnergy();
-	if (energy > 0)
+	if (energyPoints > 0)
 	{
-		energy--;
+		energyPoints--;
 		std::cout << "ScavTrap " << getName() << " attacks " << target << ", causing " << getAttackDmg() << " points of damage!" << std::endl;
-		setEnergy(energy);
 	}
 	else
 		std::cout << "ScavTrap " << getName() << " has run out of energy :(" << std::endl; 

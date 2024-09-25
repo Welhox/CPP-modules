@@ -6,7 +6,7 @@
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:58:49 by casimirri         #+#    #+#             */
-/*   Updated: 2024/09/25 16:10:42 by clundber         ###   ########.fr       */
+/*   Updated: 2024/09/25 16:28:33 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "ClapTrap.hpp"
 # include <string>
 
-class ScavTrap : public ClapTrap
+class ScavTrap : public virtual ClapTrap
 {
 private:
 

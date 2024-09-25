@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 13:18:41 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/25 17:28:29 by clundber         ###   ########.fr       */
+/*   Created: 2024/09/25 14:26:46 by clundber          #+#    #+#             */
+/*   Updated: 2024/09/25 16:35:53 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ClapTrap.hpp"
+# pragma once
 # include "ScavTrap.hpp"
 # include "FragTrap.hpp"
 
-int	main()
+class DiamondTrap: public ScavTrap, public FragTrap
 {
-	ClapTrap tom("Tom");
-	ClapTrap kevin("Kevin");
-	ScavTrap casi("Casi");	
+private:
+	std::string name;
 
-	casi.attack("Kevin");
-	kevin.takeDamage(20);
-	kevin.attack("Casi");
-	casi.takeDamage(0);
-	ScavTrap copy(casi);
-	ScavTrap clone("clone");
+public:
+	DiamondTrap(std::string);
+	~DiamondTrap();
+	// DiamondTrap(DiamondTrap&);
+	// DiamondTrap& operator=(DiamondTrap&);
 
-	clone = copy;
-	copy.guardGate();
-	
-	FragTrap fraggy("Fraggy");
-	fraggy.highFivesGuys();
-	fraggy.beRepaired(10);
-	fraggy.attack("casi");
-	casi.takeDamage(fraggy.getAttackDmg());
-}
+	// void whoAmI();
+};

@@ -6,7 +6,7 @@
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:58:49 by casimirri         #+#    #+#             */
-/*   Updated: 2024/09/25 14:22:21 by clundber         ###   ########.fr       */
+/*   Updated: 2024/09/25 16:10:42 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ private:
 
 public:
 	ScavTrap(std::string);
+	ScavTrap();
 	~ScavTrap();
 	ScavTrap(ScavTrap&);
 	ScavTrap& operator=(ScavTrap&);
