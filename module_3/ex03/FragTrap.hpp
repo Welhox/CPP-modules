@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:14:12 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/25 16:28:41 by clundber         ###   ########.fr       */
+/*   Updated: 2024/09/25 22:22:23 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "ClapTrap.hpp"
 # include <string>
 
-class FragTrap : public virtual ClapTrap
+class FragTrap : virtual public ClapTrap
 {
 private:
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:58:49 by casimirri         #+#    #+#             */
-/*   Updated: 2024/09/25 16:28:33 by clundber         ###   ########.fr       */
+/*   Updated: 2024/09/25 22:22:49 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "ClapTrap.hpp"
 # include <string>
 
-class ScavTrap : public virtual ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
 private:
 

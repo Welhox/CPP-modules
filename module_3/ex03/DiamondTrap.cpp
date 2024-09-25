@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:26:35 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/25 17:44:03 by clundber         ###   ########.fr       */
+/*   Updated: 2024/09/25 22:18:30 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 DiamondTrap::~DiamondTrap(){ std::cout << "DiamondTrap destructor called" << std::endl; }
 
-DiamondTrap::DiamondTrap(std::string new_name): ClapTrap(new_name + "_clap_name"), ScavTrap(), FragTrap(), name(new_name)
+DiamondTrap::DiamondTrap(std::string new_name): ClapTrap(), FragTrap(), ScavTrap(), name(new_name)
 {
-	// this->name = new_name;
+	ClapTrap::name = new_name + "_clap_name";
+	this->name = new_name;
 	this->energyPoints = ScavTrap::energyPoints;
-	
 	this->hitPoints = FragTrap::hitPoints;
 	this->attackDamage = FragTrap::attackDamage;
 

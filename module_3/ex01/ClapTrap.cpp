@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 14:51:44 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/25 16:00:08 by clundber         ###   ########.fr       */
+/*   Updated: 2024/09/25 21:28:10 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:14:35 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/25 16:24:27 by clundber         ###   ########.fr       */
+/*   Updated: 2024/09/25 20:27:52 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ FragTrap::FragTrap(std::string newName): ClapTrap()
 	std::cout << "FragTrap constructor called" << std::endl;
 }
 
-FragTrap::FragTrap(FragTrap& other)
+FragTrap::FragTrap(FragTrap& other): FragTrap()
 {
 	std::cout << "FragTrap copy constructor called" << std::endl;
 	*this = other;
