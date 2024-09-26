@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:26:35 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/25 22:18:30 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/09/26 15:13:31 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,41 @@
 
 DiamondTrap::~DiamondTrap(){ std::cout << "DiamondTrap destructor called" << std::endl; }
 
-DiamondTrap::DiamondTrap(std::string new_name): ClapTrap(), FragTrap(), ScavTrap(), name(new_name)
+DiamondTrap::DiamondTrap(std::string new_name): ClapTrap(), ScavTrap(), FragTrap(), name(new_name)
 {
 	ClapTrap::name = new_name + "_clap_name";
-	this->name = new_name;
-	this->energyPoints = ScavTrap::energyPoints;
+	this->energyPoints = ScavTrap::default_energy;
 	this->hitPoints = FragTrap::hitPoints;
 	this->attackDamage = FragTrap::attackDamage;
-
 	std::cout << "DiamondTrap constructor called" << std::endl;
 }
 
-// • Name, which is passed as parameter to a constructor
-// • ClapTrap::name (parameter of the constructor + "_clap_name" suffix)
-// • Hit points (FragTrap)
-// • Energy points (ScavTrap)
-// • Attack damage (FragTrap)
-// • attack() (Scavtrap)
+DiamondTrap::DiamondTrap(): ClapTrap(), ScavTrap(), FragTrap()
+{
+	name = "default";
+	ClapTrap::name = "default_clap_name";
+	this->energyPoints = ScavTrap::default_energy;
+	this->hitPoints = FragTrap::hitPoints;
+	this->attackDamage = FragTrap::attackDamage;
+	std::cout << "DiamondTrap default constructor called" << std::endl;
+}
 
-// Of course, the ClapTrap subobject of the DiamondTrap will be created once, and only
-// once. Yes, there’s a trick.
+DiamondTrap::DiamondTrap(DiamondTrap& other): ClapTrap(), ScavTrap(), FragTrap()
+{
+	std::cout << "DiamondTrap copy constructor called" << std::endl;
+	
+	*this = other;
+}
+
+DiamondTrap& DiamondTrap::operator=(DiamondTrap& other)
+{
+	std::cout << "DiamondTrap copy assigment operator called" << std::endl;
+	this->name = other.name;
+	this->hitPoints = other.hitPoints;
+	this->energyPoints = other.energyPoints;
+	this->attackDamage = other.attackDamage;
+	this->ClapTrap::name = other.ClapTrap::name;
+	return(*this);
+}
+
+void DiamondTrap::whoAmI(){std::cout << "My Diamond name is: " << name << " and my Clap name is: " << ClapTrap::name << std::endl;}

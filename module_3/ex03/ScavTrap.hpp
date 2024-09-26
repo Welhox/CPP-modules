@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:58:49 by casimirri         #+#    #+#             */
-/*   Updated: 2024/09/25 22:22:49 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/09/26 15:08:34 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 class ScavTrap : virtual public ClapTrap
 {
-private:
-
+protected:
+	unsigned int default_energy;
 public:
 	ScavTrap(std::string);
 	ScavTrap();
@@ -27,5 +27,4 @@ public:
 	
 	void attack(const std::string& target);
 	void guardGate();
-	
 };

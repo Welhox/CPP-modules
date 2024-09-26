@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:14:35 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/25 20:27:52 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/09/26 15:16:19 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ FragTrap::~FragTrap(){ std::cout << "FragTrap destructor called" << std::endl; }
 FragTrap::FragTrap(): ClapTrap()
 {
 	name = "default";
-	energyPoints = 0;
-	hitPoints = 0;
-	attackDamage = 0;
+	energyPoints = 100;
+	hitPoints = 100;
+	attackDamage = 30;
 
 	std::cout << "FragTrap default constructor called" << std::endl;
 }

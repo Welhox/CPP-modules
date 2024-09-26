@@ -6,7 +6,7 @@
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 13:18:41 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/25 15:06:01 by clundber         ###   ########.fr       */
+/*   Updated: 2024/09/26 15:14:34 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ int	main()
 	std::cout << "energy = " << timantti.getEnergy() << std::endl;
 	std::cout << "attack dmg = " << timantti.getAttackDmg() << std::endl;
 	std::cout << "name = " << timantti.getName() << std::endl;
+	timantti.attack("pappa");
+	timantti.whoAmI();
 
 }

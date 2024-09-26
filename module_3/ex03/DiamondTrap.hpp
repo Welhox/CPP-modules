@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:26:46 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/25 22:16:35 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/09/26 15:14:38 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 # include "ScavTrap.hpp"
 # include "FragTrap.hpp"
 
-class DiamondTrap: public FragTrap, public ScavTrap
+class DiamondTrap: public ScavTrap, public FragTrap 
 {
 private:
 	std::string name;
 
 public:
+	DiamondTrap();
 	DiamondTrap(std::string);
 	~DiamondTrap();
-	// DiamondTrap(DiamondTrap&);
-	// DiamondTrap& operator=(DiamondTrap&);
-
-	// void whoAmI();
+	DiamondTrap(DiamondTrap&);
+	DiamondTrap& operator=(DiamondTrap&);
+	void whoAmI();
 };

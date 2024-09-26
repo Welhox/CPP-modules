@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 14:51:44 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/25 21:28:10 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/09/26 15:15:35 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 ClapTrap::ClapTrap(): name("default")
 {
-	energyPoints	= 0;
-	hitPoints		= 0;
+	energyPoints	= 10;
+	hitPoints		= 10;
 	attackDamage	= 0;
 	std::cout << "ClapTrap default constructor called" << std::endl;
 }
@@ -90,17 +90,11 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (hitPoints > 0)
 	{
-		unsigned int temp = amount;
-		if (amount > 10)
-			amount = 10;
 		if (energyPoints > 0)
 		{
 			energyPoints--;
-			if (hitPoints < 10)
-				hitPoints += amount;
-			if (hitPoints > 10)
-				hitPoints = 10;
-			std::cout << "ClapTrap " << name << " repairs itself for " << temp << " hit points, total health after repair: " << hitPoints << std::endl;
+			hitPoints += amount;
+			std::cout << "ClapTrap " << name << " repairs itself for " << amount << " hit points, total health after repair: " << hitPoints << std::endl;
 		}
 		else
 			std::cout << "ClapTrap " << name << " has run out of energy :(" << std::endl; 
