@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 10:56:59 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/28 22:12:49 by casimirri        ###   ########.fr       */
+/*   Created: 2024/09/28 22:03:09 by casimirri         #+#    #+#             */
+/*   Updated: 2024/09/28 22:09:31 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # pragma once
-# include <string>
+#include "Animal.hpp"
 
-class Animal
+class Cat: public Animal
 {
-protected:
-	std::string type;	
+private:
 
 public:
-	Animal();
-	virtual ~Animal();
-	Animal(Animal&);
-	Animal& operator=(Animal&);
-	virtual void makeSound() const;
-	std::string getType() const;
+	Cat();
+	~Cat();
+	Cat(Cat&);
+	Cat& operator=(Cat&);
+	void makeSound() const override;
 };

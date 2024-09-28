@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 10:56:59 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/28 22:12:49 by casimirri        ###   ########.fr       */
+/*   Created: 2024/09/28 21:49:27 by casimirri         #+#    #+#             */
+/*   Updated: 2024/09/28 22:17:56 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# pragma once
-# include <string>
 
-class Animal
+#include <iostream>
+#include "Animal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
+
+int main()
 {
-protected:
-	std::string type;	
-
-public:
-	Animal();
-	virtual ~Animal();
-	Animal(Animal&);
-	Animal& operator=(Animal&);
-	virtual void makeSound() const;
-	std::string getType() const;
-};
+const Animal* meta = new Animal();
+const Animal* j = new Dog();
+const Animal* i = new Cat();
+std::cout << j->getType() << " " << std::endl;
+std::cout << i->getType() << " " << std::endl;
+i->makeSound();
+j->makeSound();
+meta->makeSound();
+delete meta;
+delete j;
+delete i;
+return 0;
+}

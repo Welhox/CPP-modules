@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 10:56:59 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/28 22:12:49 by casimirri        ###   ########.fr       */
+/*   Created: 2024/09/28 22:29:20 by casimirri         #+#    #+#             */
+/*   Updated: 2024/09/28 23:42:44 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # pragma once
-# include <string>
-
-class Animal
+#include <iostream>
+class Brain
 {
-protected:
-	std::string type;	
-
+private:
+    std::string ideas[100];
+    
 public:
-	Animal();
-	virtual ~Animal();
-	Animal(Animal&);
-	Animal& operator=(Animal&);
-	virtual void makeSound() const;
-	std::string getType() const;
+	Brain();
+	~Brain();
+	Brain(Brain&);
+	Brain& operator=(Brain&);
 };
