@@ -6,7 +6,7 @@
 /*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 22:01:06 by casimirri         #+#    #+#             */
-/*   Updated: 2024/09/28 22:10:21 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/09/29 11:30:58 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,15 @@
 	Cat::Cat(): Animal()
 	{
 		type = "Cat";
+		brain = new Brain();
 		std::cout << "Catto spawned" << std::endl;
 	}
 
-	Cat::~Cat(){std::cout << "Catto despawnd" << std::endl;}
+	Cat::~Cat()
+	{
+		delete brain;
+		std::cout << "Catto despawnd" << std::endl;
+	}
 
 	Cat::Cat(Cat& other): Animal()
 	{

@@ -6,17 +6,18 @@
 /*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 14:07:45 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/28 22:10:34 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/09/29 11:32:27 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # pragma once
 #include "Animal.hpp"
+# include "Brain.hpp"
 
 class Dog: public Animal
 {
 private:
-
+	Brain* brain;
 public:
 	Dog();
 	~Dog();

@@ -6,7 +6,7 @@
 /*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 22:29:20 by casimirri         #+#    #+#             */
-/*   Updated: 2024/09/28 23:42:44 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/09/29 11:28:18 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,6 @@ public:
 	~Brain();
 	Brain(Brain&);
 	Brain& operator=(Brain&);
+	std::string getIdea(unsigned int);
+	void setIdea(unsigned int, std::string);
 };

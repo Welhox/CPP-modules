@@ -6,7 +6,7 @@
 /*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 14:07:26 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/28 22:17:03 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/09/29 11:32:36 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,15 @@
 	Dog::Dog(): Animal()
 	{
 		type = "Dog";
+		brain = new Brain();
 		std::cout << "Doggo spawned" << std::endl;
 	}
 
-	Dog::~Dog(){std::cout << "Doggo despawnd" << std::endl;}
+	Dog::~Dog()
+	{
+		delete brain;
+		std::cout << "Doggo despawnd" << std::endl;
+	}
 
 	Dog::Dog(Dog& other): Animal()
 	{

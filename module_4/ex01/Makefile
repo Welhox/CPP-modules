@@ -6,7 +6,7 @@
 #    By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/27 10:53:06 by clundber          #+#    #+#              #
-#    Updated: 2024/09/28 22:16:08 by casimirri        ###   ########.fr        #
+#    Updated: 2024/09/29 11:36:15 by casimirri        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ COLOUR_END=\033[0m
 NAME = Animals
 
 #------------- SOURCE FILES ------#
-CFILES = main.cpp Animal.cpp Dog.cpp Cat.cpp
+CFILES = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 
 OFILES = $(CFILES:.cpp=.o)
 
