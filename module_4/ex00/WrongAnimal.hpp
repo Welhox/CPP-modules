@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 14:07:45 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/29 15:05:03 by casimirri        ###   ########.fr       */
+/*   Created: 2024/09/27 10:56:59 by clundber          #+#    #+#             */
+/*   Updated: 2024/09/28 22:12:49 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # pragma once
-#include "Animal.hpp"
+# include <string>
 
-class Dog: public Animal
+class WrongAnimal
 {
-private:
+protected:
+	std::string type;	
 
 public:
-	Dog();
-	~Dog();
-	Dog(Dog&);
-	Dog& operator=(Dog&);
-	void makeSound() const override;
+	WrongAnimal();
+	~WrongAnimal();
+	WrongAnimal(WrongAnimal&);
+	WrongAnimal& operator=(WrongAnimal&);
+	void makeSound() const;
+	std::string getType() const;
 };
