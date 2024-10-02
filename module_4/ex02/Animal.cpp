@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 10:56:48 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/28 22:17:37 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/10/02 10:41:47 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,7 @@
 		}
 		return (*this);
 	}
-
+	
 	//memeber functions
-
- 	void Animal::makeSound() const
-	{
-		std::cout << "Rabid animal noices" << std::endl;
-	}
 
 	std::string Animal::getType() const{return(type);}
