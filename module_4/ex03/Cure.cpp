@@ -6,7 +6,7 @@
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 15:52:22 by clundber          #+#    #+#             */
-/*   Updated: 2024/10/02 15:52:23 by clundber         ###   ########.fr       */
+/*   Updated: 2024/10/03 11:37:02 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,9 @@
 		return(*this);
 	}
 
-	Cure* Cure::clone() const
+	AMateria* Cure::clone() const
 	{
 		Cure *temp = new Cure();
 		return (temp);
+		//this need fixing
 	}

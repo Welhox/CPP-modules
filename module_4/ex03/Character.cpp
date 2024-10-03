@@ -6,7 +6,7 @@
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 12:05:05 by clundber          #+#    #+#             */
-/*   Updated: 2024/10/02 15:42:00 by clundber         ###   ########.fr       */
+/*   Updated: 2024/10/03 11:22:58 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,4 +88,10 @@ void Character::unequip(int idx)
 	// not working at the moment, will get back to it later
 }
 
-//use needs to be implemented still;
+void Character::use(int idx, ICharacter& target)
+{
+	if (idx >= 0 && idx < 4 && this->materias[idx] != nullptr)
+		this->materias[idx]->use(target);
+	else
+		std::cout << "no materia equipped in specified slot" << std::endl;
+}

@@ -6,7 +6,7 @@
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 15:46:07 by clundber          #+#    #+#             */
-/*   Updated: 2024/10/02 15:57:43 by clundber         ###   ########.fr       */
+/*   Updated: 2024/10/03 10:52:07 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 class MateriaSource: public IMateriaSource
 {
 private:
-
+	AMateria *templates[4];
 public:
 	MateriaSource();
 	MateriaSource(std::string name);
@@ -24,5 +24,6 @@ public:
 	MateriaSource(MateriaSource&);
 	MateriaSource& operator=(MateriaSource&);
 
-	
+	void learnMateria(AMateria*) override;
+	AMateria* createMateria(std::string const & type) override;
 };

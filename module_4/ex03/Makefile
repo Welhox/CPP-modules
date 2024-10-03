@@ -6,7 +6,7 @@
 #    By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/27 10:53:06 by clundber          #+#    #+#              #
-#    Updated: 2024/10/02 11:05:48 by clundber         ###   ########.fr        #
+#    Updated: 2024/10/03 11:32:57 by clundber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ COLOUR_END=\033[0m
 NAME = materia
 
 #------------- SOURCE FILES ------#
-CFILES = main.cpp 
+CFILES = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 
 OFILES = $(CFILES:.cpp=.o)
 

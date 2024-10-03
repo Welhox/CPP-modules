@@ -6,7 +6,7 @@
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 11:25:33 by clundber          #+#    #+#             */
-/*   Updated: 2024/10/02 11:50:54 by clundber         ###   ########.fr       */
+/*   Updated: 2024/10/03 11:37:15 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,9 @@
 		return(*this);
 	}
 
-	Ice* Ice::clone() const
+	AMateria* Ice::clone() const
 	{
 		Ice *temp = new Ice();
 		return (temp);
+		//this needs fixing
 	}

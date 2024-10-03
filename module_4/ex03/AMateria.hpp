@@ -6,9 +6,13 @@
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 11:07:50 by clundber          #+#    #+#             */
-/*   Updated: 2024/10/02 15:27:14 by clundber         ###   ########.fr       */
+/*   Updated: 2024/10/03 11:34:08 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#pragma once
+# include <iostream>
+# include "Character.hpp"
 
 class AMateria
 {

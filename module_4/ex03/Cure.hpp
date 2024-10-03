@@ -6,7 +6,7 @@
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 15:52:27 by clundber          #+#    #+#             */
-/*   Updated: 2024/10/02 15:52:28 by clundber         ###   ########.fr       */
+/*   Updated: 2024/10/03 11:36:50 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # pragma once
 # include "AMateria.hpp"
 
-class Cure: public AMateria
+class Cure: virtual public AMateria
 {
 private:
 
@@ -23,5 +23,5 @@ public:
 	~Cure();
 	Cure(Cure&);
 	Cure& operator=(Cure&);
-	Cure* clone() const override;
+	AMateria* clone() const override;
 };

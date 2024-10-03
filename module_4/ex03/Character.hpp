@@ -6,7 +6,7 @@
 /*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 12:00:30 by clundber          #+#    #+#             */
-/*   Updated: 2024/10/02 15:18:27 by clundber         ###   ########.fr       */
+/*   Updated: 2024/10/03 11:29:48 by clundber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "ICharacter.hpp"
 # include "AMateria.hpp"
 
-class Character: public ICharacter, public AMateria
+class Character: public ICharacter, public Ice, public Cure
 {
 private:
 	std::string name;
@@ -30,4 +30,5 @@ public:
 	std::string const & getName() const override;
 	void equip(AMateria* m) override;
 	void unequip(int idx) override;
+	void use(int idx, ICharacter& target) override;
 };
