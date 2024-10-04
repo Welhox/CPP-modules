@@ -6,7 +6,7 @@
 /*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 14:07:45 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/29 11:35:50 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/10/04 22:34:56 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,6 @@ public:
 	Dog(Dog&);
 	Dog& operator=(Dog&);
 	void makeSound() const override;
+	void setIdea(unsigned int index, std::string idea);
+	std::string getIdea(unsigned int index);
 };

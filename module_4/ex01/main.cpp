@@ -6,7 +6,7 @@
 /*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 21:49:27 by casimirri         #+#    #+#             */
-/*   Updated: 2024/09/29 11:35:03 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/10/04 22:41:56 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,12 @@ int main()
 {
 const Animal* j = new Dog();
 const Animal* i = new Cat();
+Dog* bull = new Dog();
+bull->setIdea(5, "crazy idea");
+Dog* chichi = bull;
+std::cout << chichi->getIdea(5) << std::endl;
+delete bull;
+std::cout << chichi->getIdea(5) << std::endl;
 delete j;//should not create a leak
 delete i;
 return 0;

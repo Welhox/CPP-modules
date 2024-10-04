@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clundber < clundber@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 15:47:57 by clundber          #+#    #+#             */
-/*   Updated: 2024/10/03 11:15:55 by clundber         ###   ########.fr       */
+/*   Updated: 2024/10/04 22:43:08 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,5 @@ void MateriaSource::learnMateria(AMateria* other)
 		if (this->templates[i] != nullptr && this->templates[i]->getType() == type)
 			return (this->templates[i]);
 	}
-	return (0);
+	return (nullptr);
 }

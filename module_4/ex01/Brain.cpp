@@ -6,7 +6,7 @@
 /*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 22:29:48 by casimirri         #+#    #+#             */
-/*   Updated: 2024/09/29 11:40:27 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/10/04 22:32:04 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@
 	{
 		if (index < 100)
 			return (this->ideas[index]);
-		return 0;
+		return ("incorrect index");
 	}
 
 	void	Brain::setIdea(unsigned int index, std::string idea)

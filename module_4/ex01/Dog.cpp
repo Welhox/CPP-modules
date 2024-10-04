@@ -6,7 +6,7 @@
 /*   By: casimirri <clundber@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 14:07:26 by clundber          #+#    #+#             */
-/*   Updated: 2024/09/29 11:32:36 by casimirri        ###   ########.fr       */
+/*   Updated: 2024/10/04 22:37:53 by casimirri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,14 @@
 	void Dog::makeSound() const
 	{
 		std::cout << "Bark Bark" << std::endl;
+	}
+
+		void	Dog::setIdea(unsigned int index, std::string idea)
+	{
+		this->brain->setIdea(index, idea);
+	}	
+
+	std::string Dog::getIdea(unsigned int index)
+	{
+		return(this->brain->getIdea(index));
 	}
